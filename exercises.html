@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التمارين - دليلك نحو الصحة</title>
+    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="exercises.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/logo-health.svg" alt="دليلك نحو الصحة" class="logo-img">
+            <div class="site-title">
+                <h1>دليلك نحو الصحة</h1>
+                <span class="english-title">Your Guide to Health</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="exercises.html" class="active">التمارين</a></li>
+                <li><a href="articles.html">المقالات</a></li>
+                <li><a href="calculator.html">حاسبة التغذية الذكية</a></li>
+                <li><button id="darkModeToggle" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                    <span>الوضع الداكن</span>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="exercise-categories">
+            <div class="category-card" id="cardio">
+                <div class="category-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <h2>تمارين التحمل (الكارديو)</h2>
+                <div class="category-content">
+                    <h3>الأمثلة</h3>
+                    <ul>
+                        <li>الجري</li>
+                        <li>ركوب الدراجة</li>
+                        <li>السباحة</li>
+                        <li>القفز بالحبل</li>
+                    </ul>
+                    <h3>الفوائد</h3>
+                    <ul>
+                        <li>تحسين صحة القلب</li>
+                        <li>زيادة القدرة على التحمل</li>
+                        <li>حرق السعرات الحرارية</li>
+                    </ul>
+                    <h3>الفئة المستهدفة</h3>
+                    <p>جميع الفئات، خاصة من يريدون تحسين اللياقة القلبية</p>
+                </div>
+            </div>
+
+            <div class="category-card" id="strength">
+                <div class="category-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h2>تمارين القوة</h2>
+                <div class="category-content">
+                    <h3>الأمثلة</h3>
+                    <ul>
+                        <li>تمارين الضغط للصدر</li>
+                        <li>تمارين السحب للظهر</li>
+                        <li>تمارين الكتف (الضغط العلوي)</li>
+                        <li>تمارين البطن المتنوعة</li>
+                        <li>تمارين الساقين (القرفصاء)</li>
+                        <li>تمارين العضلة ثلاثية الرؤوس</li>
+                        <li>تمارين الذراع الأمامية</li>
+                    </ul>
+                    <h3>الفوائد</h3>
+                    <ul>
+                        <li>زيادة الكتلة العضلية</li>
+                        <li>تحسين القوة البدنية</li>
+                        <li>تقوية العظام</li>
+                        <li>تحسين التمثيل الغذائي</li>
+                        <li>تحسين الثقة بالنفس</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="category-card" id="flexibility">
+                <div class="category-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h2>تمارين المرونة</h2>
+                <div class="category-content">
+                    <h3>الأمثلة</h3>
+                    <ul>
+                        <li>تمارين الإطالة</li>
+                        <li>تمارين التمدد</li>
+                    </ul>
+                    <h3>الفوائد</h3>
+                    <ul>
+                        <li>زيادة المرونة</li>
+                        <li>تحسين التوازن</li>
+                        <li>تقليل خطر الإصابات</li>
+                    </ul>
+                    <h3>الفئة المستهدفة</h3>
+                    <p>جميع الفئات، خاصة كبار السن والرياضيين</p>
+                </div>
+            </div>
+
+            <div class="category-card" id="hiit">
+                <div class="category-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h2>تمارين HIIT</h2>
+                <div class="category-content">
+                    <h3>الأمثلة</h3>
+                    <ul>
+                        <li>تمارين البيرني</li>
+                        <li>الجري في المكان السريع</li>
+                        <li>القفز مع فتح وضم القدمين</li>
+                        <li>تسلق الجبل</li>
+                        <li>القفز مع الضغط</li>
+                    </ul>
+                    <h3>الفوائد</h3>
+                    <ul>
+                        <li>حرق سعرات حرارية عالية</li>
+                        <li>تحسين التحمل</li>
+                        <li>زيادة معدل الأيض</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="workout-programs">
+            <h2 class="section-title">برامج تدريبية لحرق السعرات</h2>
+            
+            <div class="program-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>البرنامج</th>
+                            <th>التمارين</th>
+                            <th>المدة</th>
+                            <th>السعرات المحروقة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>البرنامج المبتدئ</td>
+                            <td>
+                                <ul>
+                                    <li>مشي سريع (20 دقيقة)</li>
+                                    <li>تمارين سويدي (10 دقائق)</li>
+                                    <li>تمارين بطن (5 دقائق)</li>
+                                </ul>
+                            </td>
+                            <td>35 دقيقة</td>
+                            <td>~250 سعرة</td>
+                        </tr>
+                        <tr>
+                            <td>البرنامج المتوسط</td>
+                            <td>
+                                <ul>
+                                    <li>جري (20 دقيقة)</li>
+                                    <li>تمارين قوة (15 دقيقة)</li>
+                                    <li>تمارين بطن (10 دقائق)</li>
+                                </ul>
+                            </td>
+                            <td>45 دقيقة</td>
+                            <td>~400 سعرة</td>
+                        </tr>
+                        <tr>
+                            <td>البرنامج المتقدم</td>
+                            <td>
+                                <ul>
+                                    <li>تمارين HIIT (25 دقيقة)</li>
+                                    <li>تمارين قوة (20 دقيقة)</li>
+                                    <li>تمارين بطن وظهر (15 دقيقة)</li>
+                                </ul>
+                            </td>
+                            <td>60 دقيقة</td>
+                            <td>~600 سعرة</td>
+                        </tr>
+                        <tr>
+                            <td>برنامج حرق الدهون</td>
+                            <td>
+                                <ul>
+                                    <li>تمارين HIIT (20 دقيقة)</li>
+                                    <li>تمارين المعدة (10 دقائق)</li>
+                                    <li>تمارين الجانبين (10 دقائق)</li>
+                                </ul>
+                            </td>
+                            <td>40 دقيقة</td>
+                            <td>~450 سعرة</td>
+                        </tr>
+                        <tr>
+                            <td>برنامج بناء العضلات</td>
+                            <td>
+                                <ul>
+                                    <li>تمارين الصدر والكتف (20 دقيقة)</li>
+                                    <li>تمارين الظهر (15 دقيقة)</li>
+                                    <li>تمارين الساقين (15 دقيقة)</li>
+                                </ul>
+                            </td>
+                            <td>50 دقيقة</td>
+                            <td>~500 سعرة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="suggestions">
+            <h3>اقتراحاتكم تهمني</h3>
+            <p>تابعوني على منصة X: <a href="https://twitter.com/6ar_t">@6ar_t</a></p>
+        </div>
+    </footer>
+    <script src="darkMode.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة التغذية الذكية - دليلك نحو الصحة</title>
+    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/logo-health.svg" alt="دليلك نحو الصحة" class="logo-img">
+            <div class="site-title">
+                <h1>دليلك نحو الصحة</h1>
+                <span class="english-title">Your Guide to Health</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="exercises.html">التمارين</a></li>
+                <li><a href="articles.html">المقالات</a></li>
+                <li><a href="calculator.html" class="active">حاسبة التغذية الذكية</a></li>
+                <li><button id="darkModeToggle" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                    <span>الوضع الداكن</span>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator-section">
+            <div class="calculator-container">
+                <h2>حاسبة التغذية الذكية</h2>
+                <form id="nutritionForm" class="calculator-form">
+                    <div class="form-group">
+                        <label for="gender">الجنس:</label>
+                        <select id="gender" required>
+                            <option value="male">ذكر</option>
+                            <option value="female">أنثى</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">العمر:</label>
+                        <input type="number" id="age" min="15" max="80" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="height">الطول (سم):</label>
+                        <input type="number" id="height" min="140" max="220" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weight">الوزن (كجم):</label>
+                        <input type="number" id="weight" min="40" max="200" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="activity">مستوى النشاط:</label>
+                        <select id="activity" required>
+                            <option value="1.2">قليل الحركة (مكتبي)</option>
+                            <option value="1.375">نشاط خفيف (1-3 مرات/أسبوع)</option>
+                            <option value="1.55">نشاط متوسط (3-5 مرات/أسبوع)</option>
+                            <option value="1.725">نشاط عالي (6-7 مرات/أسبوع)</option>
+                            <option value="1.9">نشاط مكثف (رياضي محترف)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goal">الهدف:</label>
+                        <select id="goal" required>
+                            <option value="lose">إنقاص الوزن</option>
+                            <option value="maintain">المحافظة على الوزن</option>
+                            <option value="gain">زيادة الوزن</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="calculate-btn">احسب النتائج</button>
+                </form>
+            </div>
+
+            <div id="results" class="results-container" style="display: none;">
+                <h3>نتائج التحليل</h3>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <i class="fas fa-weight"></i>
+                        <h4>مؤشر كتلة الجسم</h4>
+                        <p id="bmi">--</p>
+                        <span id="bmiCategory" class="category"></span>
+                    </div>
+
+                    <div class="result-card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4>الوزن المثالي</h4>
+                        <p id="idealWeight">--</p>
+                    </div>
+
+                    <div class="result-card">
+                        <i class="fas fa-fire"></i>
+                        <h4>السعرات اليومية المطلوبة</h4>
+                        <p id="calories">--</p>
+                    </div>
+
+                    <div class="result-card">
+                        <i class="fas fa-fire-alt"></i>
+                        <h4>السعرات الحرارية الحالية</h4>
+                        <p id="currentCalories">--</p>
+                        <span class="category">سعرة/يوم</span>
+                    </div>
+                </div>
+
+                <div class="meal-plan">
+                    <h3>برامجك الغذائية اليومية المقترحة</h3>
+                    <div class="meal-tabs">
+                        <button class="tab-btn active" data-plan="1">البرنامج الأول</button>
+                        <button class="tab-btn" data-plan="2">البرنامج الثاني</button>
+                        <button class="tab-btn" data-plan="3">البرنامج الثالث</button>
+                    </div>
+                    <div id="plan1" class="meal-plan-content active">
+                        <div class="meal-grid">
+                            <div class="meal-card">
+                                <h4>الفطور</h4>
+                                <ul id="breakfast"></ul>
+                            </div>
+                            <div class="meal-card">
+                                <h4>الغداء</h4>
+                                <ul id="lunch"></ul>
+                            </div>
+                            <div class="meal-card">
+                                <h4>العشاء</h4>
+                                <ul id="dinner"></ul>
+                            </div>
+                            <div class="meal-card">
+                                <h4>وجبات خفيفة</h4>
+                                <ul id="snacks"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plan2" class="meal-plan-content">
+                        <div class="meal-grid">
+                            <!-- سيتم ملؤها عبر JavaScript -->
+                        </div>
+                    </div>
+                    <div id="plan3" class="meal-plan-content">
+                        <div class="meal-grid">
+                            <!-- سيتم ملؤها عبر JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-plan">
+                    <h3>برنامج النشاط البدني المقترح</h3>
+                    <div class="activity-schedule">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>اليوم</th>
+                                    <th>نوع النشاط</th>
+                                    <th>المدة</th>
+                                    <th>السعرات المحروقة</th>
+                                </tr>
+                            </thead>
+                            <tbody id="activitySchedule">
+                                <!-- سيتم ملؤها عبر JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="suggestions">
+            <h3>اقتراحاتكم تهمني</h3>
+            <p>تابعوني على منصة X: <a href="https://twitter.com/6ar_t">@6ar_t</a></p>
+        </div>
+    </footer>
+    <script src="calculator.js"></script>
+    <script src="darkMode.js"></script>
+</body>
+</html>

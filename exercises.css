@@ -1,0 +1,146 @@
+.exercise-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.category-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.category-icon i {
+    font-size: 3rem;
+}
+
+.category-content {
+    padding: 1.5rem;
+}
+
+.category-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.category-content h3 {
+    color: var(--secondary-color);
+    margin: 1rem 0;
+}
+
+.category-content ul {
+    list-style-type: none;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.category-content li {
+    margin: 0.5rem 0;
+    position: relative;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.category-content li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: -1em;
+}
+
+.category-content li:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(-5px);
+}
+
+.workout-programs {
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.program-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+td ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+td ul li {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+td ul li::before {
+    content: "◆";
+    color: var(--accent-color);
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.program-table td:last-child {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية - دليلك نحو الصحة</title>
+    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/logo-health.svg" alt="دليلك نحو الصحة" class="logo-img">
+            <div class="site-title">
+                <h1>دليلك نحو الصحة</h1>
+                <span class="english-title">Your Guide to Health</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">الرئيسية</a></li>
+                <li><a href="exercises.html">التمارين</a></li>
+                <li><a href="articles.html">المقالات</a></li>
+                <li><a href="calculator.html">حاسبة التغذية الذكية</a></li>
+                <li><button id="darkModeToggle" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                    <span>الوضع الداكن</span>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">رحلتك نحو حياة صحية تبدأ من هنا</h1>
+                <p class="hero-description">نقدم لك دليلاً شاملاً للصحة واللياقة البدنية مع نصائح وبرامج مخصصة</p>
+                <div class="hero-buttons">
+                    <a href="calculator.html" class="cta-button primary">احسب احتياجاتك <i class="fas fa-calculator"></i></a>
+                    <a href="exercises.html" class="cta-button secondary">ابدأ التمرين <i class="fas fa-running"></i></a>
+                </div>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>+50</h3>
+                    <p>برنامج تدريبي</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>+100</h3>
+                    <p>نظام غذائي</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">خدماتنا</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>نصائح صحية يومية</h3>
+                    <p>اكتشف أحدث النصائح الصحية لتحسين نمط حياتك</p>
+                    <a href="articles.html" class="feature-link">تصفح النصائح <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>برامج تدريبية</h3>
+                    <p>برامج مخصصة لجميع المستويات والأهداف</p>
+                    <a href="exercises.html" class="feature-link">اكتشف البرامج <i class="fas fa-arrow-left"></i></a>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>حاسبة ذكية</h3>
+                    <p>احسب احتياجاتك الغذائية وبرنامجك المثالي</p>
+                    <a href="calculator.html" class="feature-link">جرب الحاسبة <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="suggestions">
+            <h3>اقتراحاتكم تهمني</h3>
+            <p>تابعوني على منصة X: <a href="https://twitter.com/6ar_t">@6ar_t</a></p>
+        </div>
+    </footer>
+    <script src="darkMode.js"></script>
+</body>
+</html>

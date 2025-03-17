@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المقالات - دليلك نحو الصحة</title>
+    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Assets/logo-health.svg" alt="دليلك نحو الصحة" class="logo-img">
+            <div class="site-title">
+                <h1>دليلك نحو الصحة</h1>
+                <span class="english-title">Your Guide to Health</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="exercises.html">التمارين</a></li>
+                <li><a href="articles.html" class="active">المقالات</a></li>
+                <li><a href="calculator.html">حاسبة التغذية الذكية</a></li>
+                <li><button id="darkModeToggle" class="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                    <span>الوضع الداكن</span>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>المقالات الصحية</h1>
+            <p>مقالات موثوقة في مجال الصحة واللياقة البدنية</p>
+        </div>
+
+        <div class="articles-filter">
+            <button class="filter-btn active" data-category="all">جميع المقالات</button>
+            <button class="filter-btn" data-category="nutrition">التغذية</button>
+            <button class="filter-btn" data-category="fitness">اللياقة</button>
+            <button class="filter-btn" data-category="health">الصحة العامة</button>
+        </div>
+
+        <section class="articles-grid">
+            <article class="article-card" data-category="nutrition">
+                <div class="article-icon">
+                    <i class="fas fa-leaf"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">التغذية</span>
+                    <h2>أساسيات التغذية السليمة</h2>
+                    <p>دليلك الشامل للحصول على نظام غذائي متوازن...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 10 دقائق للقراءة</span>
+                        <span><i class="fas fa-user"></i> د. محمد أحمد</span>
+                    </div>
+                    <a href="articles/nutrition-basics.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="fitness">
+                <div class="article-icon">
+                    <i class="fas fa-dumbbell"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">اللياقة</span>
+                    <h2>دليل التمارين المنزلية</h2>
+                    <p>تمارين فعالة يمكنك ممارستها في المنزل...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 8 دقائق للقراءة</span>
+                        <span><i class="fas fa-user"></i> كابتن سارة</span>
+                    </div>
+                    <a href="articles/home-workout.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="health">
+                <div class="article-icon">
+                    <i class="fas fa-moon"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">الصحة العامة</span>
+                    <h2>أهمية النوم الصحي</h2>
+                    <p>كيف يؤثر النوم على صحتك العامة...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 7 دقائق للقراءة</span>
+                        <span><i class="fas fa-user"></i> د. ليلى عمر</span>
+                    </div>
+                    <a href="articles/healthy-sleep.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="nutrition">
+                <div class="article-icon">
+                    <i class="fas fa-carrot"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">التغذية</span>
+                    <h2>الخضروات وأهميتها للجسم</h2>
+                    <p>تعرف على فوائد الخضروات المختلفة وكيفية دمجها في نظامك الغذائي...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 8 دقائق للقراءة</span>
+                        <span><i class="fas fa-user"></i> د. سارة خالد</span>
+                    </div>
+                    <a href="articles/vegetables-benefits.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="fitness">
+                <div class="article-icon">
+                    <i class="fas fa-running"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">اللياقة</span>
+                    <h2>كيفية بدء روتين رياضي</h2>
+                    <p>خطوات عملية لبدء روتين رياضي فعال ومستدام...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 12 دقيقة للقراءة</span>
+                        <span><i class="fas fa-user"></i> كابتن أحمد محمود</span>
+                    </div>
+                    <a href="articles/start-fitness.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="health">
+                <div class="article-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">الصحة العامة</span>
+                    <h2>الصحة النفسية والرياضة</h2>
+                    <p>العلاقة بين النشاط البدني والصحة النفسية...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 9 دقائق للقراءة</span>
+                        <span><i class="fas fa-user"></i> د. نور الدين</span>
+                    </div>
+                    <a href="articles/mental-health.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="nutrition">
+                <div class="article-icon">
+                    <i class="fas fa-seedling"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">التغذية</span>
+                    <h2>البروتين النباتي</h2>
+                    <p>مصادر البروتين للنباتيين وكيفية تحقيق التوازن الغذائي...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 11 دقيقة للقراءة</span>
+                        <span><i class="fas fa-user"></i> د. ريم العلي</span>
+                    </div>
+                    <a href="articles/plant-protein.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="fitness">
+                <div class="article-icon">
+                    <i class="fas fa-heartbeat"></i>
+                    <div class="icon-background"></div>
+                </div>
+                <div class="article-content">
+                    <span class="category-tag">اللياقة</span>
+                    <h2>تمارين القلب والأوعية الدموية</h2>
+                    <p>أفضل التمارين لتحسين صحة القلب واللياقة القلبية...</p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-clock"></i> 10 دقائق للقراءة</span>
+                        <span><i class="fas fa-user"></i> د. خالد عمر</span>
+                    </div>
+                    <a href="articles/cardio-exercises.html" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="suggestions">
+            <h3>اقتراحاتكم تهمني</h3>
+            <p>تابعوني على منصة X: <a href="https://twitter.com/6ar_t">@6ar_t</a></p>
+        </div>
+    </footer>
+    <script src="articles.js"></script>
+    <script src="darkMode.js"></script>
+</body>
+</html>
